@@ -1,70 +1,146 @@
-# Getting Started with Create React App
+# 📝 Aplicação de Gerenciamento de Tarefas (To-Do List)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 Descrição
 
-## Available Scripts
+Esta é uma aplicação desenvolvida em **React** para gerenciamento de tarefas (To-Do List). O projeto permite ao usuário **adicionar, visualizar, editar e excluir tarefas**, utilizando conceitos modernos do React como **Hooks**, **Context API** e **React Router**.
 
-In the project directory, you can run:
+As tarefas são persistidas no navegador por meio do **localStorage**, garantindo que os dados não sejam perdidos ao recarregar a página.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Funcionalidades
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* ✅ Adicionar novas tarefas
+* 📋 Listar todas as tarefas
+* ✏️ Editar tarefas existentes
+* ❌ Excluir tarefas
+* 💾 Persistência com localStorage
+* 🔀 Navegação entre páginas com React Router
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tecnologias Utilizadas
 
-### `npm run build`
+* React
+* React Router DOM
+* Context API
+* Hooks (useState, useEffect, useContext)
+* JavaScript (ES6+)
+* CSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📁 Estrutura do Projeto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+src/
+│
+├── components/
+│   └── TaskItem.js
+│
+├── context/
+│   └── TaskContext.js
+│
+├── pages/
+│   ├── Home.js
+│   └── AddTask.js
+│
+├── App.js
+├── index.js
+└── styles.css
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ⚙️ Como Executar o Projeto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. Clone o repositório
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+git clone <url-do-repositorio>
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 2. Acesse a pasta do projeto
 
-## Learn More
+```
+cd aplicacao-de-tarefas
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 3. Instale as dependências
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm install
+```
 
-### Code Splitting
+### 4. Execute a aplicação
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+npm start
+```
 
-### Analyzing the Bundle Size
+A aplicação estará disponível em:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+http://localhost:3000
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🧠 Conceitos Aplicados
 
-### Advanced Configuration
+### 🔹 Context API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Utilizada para gerenciar o estado global das tarefas, permitindo acesso em diferentes componentes sem necessidade de prop drilling.
 
-### Deployment
+### 🔹 Hooks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* `useState`: controle de estado das tarefas
+* `useEffect`: sincronização com localStorage
+* `useContext`: acesso ao contexto global
 
-### `npm run build` fails to minify
+### 🔹 React Router
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Responsável pela navegação entre páginas:
+
+* `/` → Página inicial (lista de tarefas)
+* `/add-task` → Adicionar nova tarefa
+* `/edit-task/:id` → Editar tarefa existente
+
+---
+
+## 💾 Persistência de Dados
+
+As tarefas são armazenadas no **localStorage**, garantindo que permaneçam salvas mesmo após fechar ou recarregar o navegador.
+
+---
+
+## 🎨 Estilização
+
+O projeto utiliza CSS personalizado com:
+
+* Layout centralizado
+* Cards para tarefas
+* Botões interativos
+* Design moderno com gradiente
+
+---
+
+## 📈 Melhorias Futuras
+
+* ✔ Marcar tarefas como concluídas
+* 🔍 Filtro de tarefas (todas, concluídas, pendentes)
+* 🌙 Modo escuro
+* 📱 Responsividade para mobile
+* 🎨 Integração com bibliotecas de UI (ex: Tailwind ou Material UI)
+
+---
+
+## 👨‍💻 Autor
+
+Projeto desenvolvido por Diego Santos para prática de conceitos fundamentais do React.
+
+---
+
+## 📄 Licença
+
+Este projeto é apenas para fins de estudo e aprendizado.
