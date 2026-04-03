@@ -1,0 +1,123 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo geral */
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Container principal */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Títulos */
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #444;
+}
+
+/* Botões */
+button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #5a67d8;
+}
+
+/* Links estilo botão */
+a {
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 15px;
+  background: #48bb78;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+a:hover {
+  background: #38a169;
+}
+
+/* Inputs */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus, textarea:focus {
+  border-color: #667eea;
+}
+
+/* Card de tarefa */
+.task-card {
+  border: 1px solid #eee;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+  background: #fafafa;
+  transition: 0.2s;
+}
+
+.task-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Botões dentro do card */
+.task-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.task-actions a {
+  background: #4299e1;
+}
+
+.task-actions a:hover {
+  background: #3182ce;
+}
+
+.task-actions button {
+  background: #f56565;
+}
+
+.task-actions button:hover {
+  background: #e53e3e;
+}
+
+/* Mensagem vazia */
+.empty {
+  text-align: center;
+  color: #777;
+  margin-top: 20px;
+}

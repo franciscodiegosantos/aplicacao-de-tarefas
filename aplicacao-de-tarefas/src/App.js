@@ -1,20 +1,20 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { TaskProvider } from './context/TaskContext';
 import Home from './pages/Home';
 import AddTask from './pages/AddTask';
-import { TaskProvider } from './context/TaskContext';
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <TaskProvider>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/add-task" component={AddTask} />
-        </Switch>
-      </TaskProvider>
-    </Router>
+    <TaskProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/add-task" element={<AddTask />} />
+          <Route path="/edit-task/:id" element={<AddTask />} />
+        </Routes>
+      </BrowserRouter>
+    </TaskProvider>
   );
-};
+}
 
 export default App;

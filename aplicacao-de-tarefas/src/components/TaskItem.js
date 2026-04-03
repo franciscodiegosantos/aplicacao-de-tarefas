@@ -6,12 +6,14 @@ const TaskItem = ({ task }) => {
   const { removeTask } = useContext(TaskContext);
 
   return (
-    <div style={{ border: '1px solid #ccc', margin: 10, padding: 10 }}>
+    <div className="task-card">
       <h3>{task.title}</h3>
       <p>{task.description}</p>
 
-      <Link to={`/edit-task/${task.id}`}>Editar</Link>
-      <button onClick={() => removeTask(task.id)}>Excluir</button>
+      <div className="task-actions">
+        <Link to={`/edit-task/${task.id}`}>Editar</Link>
+        <button onClick={() => removeTask(task.id)}>Excluir</button>
+      </div>
     </div>
   );
 };

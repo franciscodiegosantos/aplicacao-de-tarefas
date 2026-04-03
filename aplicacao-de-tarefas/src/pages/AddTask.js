@@ -15,9 +15,11 @@ const AddTask = () => {
 
   // modo edição
   useEffect(() => {
-    if (id) {
-      const existingTask = tasks.find(t => t.id === Number(id));
-      if (existingTask) setTask(existingTask);
+    if (id && tasks.length > 0) {
+      const existingTask = tasks.find(t => String(t.id) === id);
+      if (existingTask) {
+        setTask(existingTask);
+      }
     }
   }, [id, tasks]);
 
@@ -34,7 +36,7 @@ const AddTask = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>{id ? 'Editar' : 'Adicionar'} Tarefa</h1>
 
       <form onSubmit={handleSubmit}>

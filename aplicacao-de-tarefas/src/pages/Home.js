@@ -7,13 +7,13 @@ const Home = () => {
   const { tasks } = useContext(TaskContext);
 
   return (
-    <div>
+    <div className="container">
       <h1>Lista de Tarefas</h1>
 
       <Link to="/add-task">Adicionar Tarefa</Link>
 
       {tasks.length === 0 ? (
-        <p>Nenhuma tarefa cadastrada</p>
+        <p className="empty">Nenhuma tarefa cadastrada</p>
       ) : (
         tasks.map(task => (
           <TaskItem key={task.id} task={task} />
